@@ -8,6 +8,10 @@ export default {
       type: String,
       default: ''
     },
+    disabled: {
+      type: Boolean,
+      default: true
+    },
     label: {
       type: String,
       default: ''
@@ -92,6 +96,9 @@ export default {
   watch: {
     value () {
       this.bindData = this.value
+    },
+    bindData () {
+      this.$emit('input', this.bindData)
     }
   },
   mounted () {

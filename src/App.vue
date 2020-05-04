@@ -24,6 +24,7 @@
 <script>
 export default {
   components: {
+    Test: () => import('@/views/test.vue'),
     Button: () => import('@/views/button.vue'),
     Input: () => import('@/views/input.vue'),
     Select: () => import('@/views/select.vue'),
@@ -33,12 +34,18 @@ export default {
     AutoFill: () => import('@/views/autofill.vue'),
     JsonTree: () => import('@/views/jsonTree.vue'),
     Popover: () => import('@/views/popover.vue'),
-    Avatar: () => import('@/views/avatar.vue')
-
+    Avatar: () => import('@/views/avatar.vue'),
+    Sparkline: () => import('@/views/sparkline.vue'),
+    MoveBlock: () => import('@/views/moveblock.vue'),
+    DragDrop: () => import('@/views/dragDrop.vue'),
+    Popup: () => import('@/views/popup.vue'),
+    Directive: () => import('@/views/directive.vue'),
+    Navbar: () => import('@/views/navbar.vue'),
+    Table: () => import('@/views/table.vue')
   },
   data: () => {
     return {
-      comp: 'Avatar',
+      comp: 'Table',
       option: {
         Button: 'Button',
         Input: 'Input',
@@ -49,7 +56,14 @@ export default {
         AutoFill: 'AUTO Fill',
         JsonTree: 'Json Tree',
         Popover: 'Popover',
-        Avatar: 'Avatar'
+        Avatar: 'Avatar',
+        Sparkline: 'Sparkline',
+        MoveBlock: 'Move Block',
+        DragDrop: 'Drag Drop',
+        Popup: 'Popup',
+        Directive: 'Directive',
+        Navbar: 'Navbar',
+        Table: 'Table'
       }
     }
   }

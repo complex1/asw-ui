@@ -6,6 +6,7 @@ import './scss/aswNotification.scss'
 import './scss/bootstrapGrid.scss'
 import './scss/bootstrapSpacing.scss'
 import './scss/component.scss'
+import './scss/dataTable.scss'
 
 // js
 import notification from './js/notification'
@@ -21,9 +22,11 @@ import inputSelect from './components/input/input_select.vue'
 import inputMultiSelect from './components/input/input_multi_select.vue'
 import inputRadio from './components/input/input_radio.vue'
 import inputSwitch from './components/input/input_switch.vue'
+import dataTable from './components/table/table.vue'
 
 import autofill from './components/autofill/autofill.vue'
 import popover from './components/popover/popover.vue'
+import navbar from './components/bar/navbar.vue'
 
 import formModal from './components/modal/form_modal.vue'
 
@@ -47,6 +50,8 @@ export default {
     Vue.component('asw-input-switch', inputSwitch)
     Vue.component('asw-autofill', autofill)
     Vue.component('asw-popover', popover)
+    Vue.component('asw-navbar', navbar)
+    Vue.component('asw-data-table', dataTable)
 
     Vue.component('asw-json-tree', josnTree)
 

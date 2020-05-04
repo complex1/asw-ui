@@ -6,7 +6,7 @@
     </label>
     <p v-if="sublabel !== ''">{{sublabel}}</p>
     <div v-for="i in getOptionArray" :key="i.id">
-      <input type="checkbox" @change="changeSelect" :id="i.id" :value="i.value" />
+      <input type="checkbox" @change="changeSelect" :id="i.id" :disabled="disabled" :value="i.value" />
       <label :for="i.id">{{i.label}}</label>
     </div>
     <br v-if="!block" />

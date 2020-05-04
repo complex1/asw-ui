@@ -170,3 +170,25 @@ select {
   border-radius: 0.2em;
 }
 // avatar end
+
+// link start
+a.asw-link {
+  font-size: 1rem;
+  padding: 5px;
+  text-decoration: none;
+  display: block;
+}
+a.asw-link:hover {
+  opacity: 80%;
+}
+.light {
+  a {
+    color: var(--dark-color) !important;
+  }
+}
+.dark {
+  a {
+    color: var(--light-color) !important;
+  }
+}
+// link end

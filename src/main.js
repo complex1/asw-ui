@@ -7,9 +7,16 @@ import documentation from '@/components/document.vue'
 import propTable from '@/components/propTable.vue'
 import eventTable from '@/components/eventTable.vue'
 import wtasw from './WtAsw/index.js'
+import sparkline from './WtAsw/sparkline'
+import dragDrop from './WtAsw/drag&Drop'
+import asyncPopup from './WtAsw/asyncPopup'
+import test from './WtAsw/components/test'
 import { codemirror } from 'vue-codemirror'
-import 'codemirror/lib/codemirror.css'
 Vue.use(wtasw)
+Vue.use(sparkline)
+Vue.use(dragDrop)
+Vue.use(asyncPopup)
+Vue.component('asw-test', test)
 Vue.component('space', spacer)
 Vue.component('codemirror', codemirror)
 Vue.component('documentation', documentation)

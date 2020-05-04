@@ -1,23 +1,35 @@
 <template>
   <div class="component">
     <h3>{{data.title}}</h3>
-      <p>{{data.about}}</p>
-      <slot class="component-show" ></slot>
-      <div v-if="!component" class="code-output" v-html="data.code"></div>
-      <codemirror v-model="data.code" :options="{
-        mode: 'xml',
-        htmlMode: true,
-        lineNumbers: true,
-        collapseIdentical: false,
-        highlightDifferences: true
-      }"></codemirror>
+      <p v-html="data.about"></p>
+      <div class="component-show my-2">
+        <slot></slot>
+      </div>
+      <div v-if="!component" class="code-output my-2" v-html="data.code"></div>
+      <codemirror v-model="data.code" :options="option"></codemirror>
   </div>
 </template>
 
 <script>
-import 'codemirror/mode/xml/xml.js'
+import 'codemirror/lib/codemirror.css'
+import './codeMirrorVue'
+// import 'codemirror/doc/docs.css'
 export default {
   props: ['data', 'component'],
+  data: () => {
+    return {
+      option: {
+        mode: {
+          name: 'vue'
+        },
+        readOnly: true,
+        htmlMode: true,
+        lineNumbers: true,
+        collapseIdentical: false,
+        highlightDifferences: true
+      }
+    }
+  },
   mounted () {
   }
 }

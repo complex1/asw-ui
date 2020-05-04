@@ -11,6 +11,7 @@
         :class="block ? 'asw-block' : ''"
         @change="changeValue"
         v-model="bindData"
+        :disabled="disabled"
       />
       <span class="slider round"></span>
     </label>

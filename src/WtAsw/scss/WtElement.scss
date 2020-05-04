@@ -120,13 +120,13 @@ html {
 .italic {
   font-style: italic;
 }
-.align-l {
+.ta-l {
   text-align: left;
 }
-.align-r {
+.ta-r {
   text-align: right;
 }
-.align-c {
+.ta-c {
   text-align: center;
 }
 .no-dec {
@@ -159,6 +159,12 @@ html {
 .j-c {
   justify-content: center;
 }
+.j-l {
+  justify-content: left;
+}
+.j-r {
+  justify-content: right;
+}
 .j-sb {
   justify-content: space-between;
 }
@@ -170,5 +176,11 @@ html {
 }
 .item-align-center {
   align-items: center;
+}
+.f-l {
+  float: left;
+}
+.f-r {
+  float: right;
 }
 

@@ -7,6 +7,7 @@
       :class="block ? 'asw-block' : ''"
       @change="changeValue"
       :placeholder="placeholder"
+      :disabled="disabled"
       v-model="bindData">
     <br v-if="!block">
     <small :class="'c-' + getMessage.class">{{getMessage.msg}}</small>

@@ -17,13 +17,13 @@ const showTooltip = function (el, message) {
 }
 
 const setToolTipInnerText = function (msg) {
-  ToolTip.innerHTML = msg
+  ToolTip.innerHTML = `<div class='asw-tooltip-msg'>${msg}<div>`
 }
 
 const setToolTipPosition = function (targetBox) {
   ToolTip.style.position = 'fixed'
   ToolTip.style.left = targetBox.x + targetBox.width / 2 + 'px'
-  ToolTip.style.top = targetBox.y + targetBox.height + 'px'
+  ToolTip.style.top = targetBox.y + targetBox.height + 2 + 'px'
 }
 
 const AddToolTip = function (el, message) {

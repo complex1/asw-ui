@@ -8,6 +8,7 @@
       @keyup="changeValue"
       @change="validateEmail"
       :placeholder="placeholder"
+      :disabled="disabled"
       v-model="bindData">
     <br v-if="!block">
     <small :class="'c-' + getMessage.class">{{getMessage.msg}}</small>
