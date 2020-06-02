@@ -43,11 +43,12 @@ export default {
     Navbar: () => import('@/views/navbar.vue'),
     Table: () => import('@/views/table.vue'),
     TextEditor: () => import('@/views/textEditor.vue'),
+    Icons: () => import('@/views/icons.vue'),
     Class: () => import('@/views/class.vue')
   },
   data: () => {
     return {
-      comp: 'Class',
+      comp: 'Icons',
       option: {
         Button: 'Button',
         Input: 'Input',
@@ -67,6 +68,7 @@ export default {
         Navbar: 'Navbar',
         Table: 'Table',
         TextEditor: 'Text Editor',
+        Icons: 'Icons',
         Class: 'Class'
       }
     }

@@ -108,16 +108,16 @@
 }
 
 .asw-spin {
-	-webkit-animation: fa-spin 2s infinite linear;
-	animation: fa-spin 2s infinite linear
+	-webkit-animation: asw-spin 2s infinite linear;
+	animation: asw-spin 2s infinite linear
 }
 
 .asw-pulse {
-	-webkit-animation: fa-spin 1s infinite steps(8);
-	animation: fa-spin 1s infinite steps(8)
+	-webkit-animation: asw-spin 1s infinite steps(8);
+	animation: asw-spin 1s infinite steps(8)
 }
 
-@-webkit-keyframes fa-spin {
+@-webkit-keyframes asw-spin {
 	0% {
 		-webkit-transform: rotate(0deg);
 		transform: rotate(0deg)
@@ -128,7 +128,7 @@
 	}
 }
 
-@keyframes fa-spin {
+@keyframes asw-spin {
 	0% {
 		-webkit-transform: rotate(0deg);
 		transform: rotate(0deg)
