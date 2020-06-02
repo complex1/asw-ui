@@ -41,11 +41,13 @@ export default {
     Popup: () => import('@/views/popup.vue'),
     Directive: () => import('@/views/directive.vue'),
     Navbar: () => import('@/views/navbar.vue'),
-    Table: () => import('@/views/table.vue')
+    Table: () => import('@/views/table.vue'),
+    TextEditor: () => import('@/views/textEditor.vue'),
+    Class: () => import('@/views/class.vue')
   },
   data: () => {
     return {
-      comp: 'Table',
+      comp: 'Class',
       option: {
         Button: 'Button',
         Input: 'Input',
@@ -63,7 +65,9 @@ export default {
         Popup: 'Popup',
         Directive: 'Directive',
         Navbar: 'Navbar',
-        Table: 'Table'
+        Table: 'Table',
+        TextEditor: 'Text Editor',
+        Class: 'Class'
       }
     }
   }

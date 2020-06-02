@@ -10,7 +10,6 @@
       v-model.number="bindData"
       :min='min'
       :max="max"
-      :disabled="disabled"
       >
     <br v-if="!block">
     <small :class="'c-' + getMessage.class">{{getMessage.msg}}</small>

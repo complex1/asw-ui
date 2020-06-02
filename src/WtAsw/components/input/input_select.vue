@@ -6,7 +6,6 @@
       :class="block ? 'asw-block' : ''"
       @change="changeValue"
       v-model="bindData"
-      :disabled="disabled"
     >
       <option v-for="i in getOptionArray" :key="i.id" :value="i.value">{{i.label}}</option>
     </select>

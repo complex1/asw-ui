@@ -7,11 +7,13 @@ import './scss/bootstrapGrid.scss'
 import './scss/bootstrapSpacing.scss'
 import './scss/component.scss'
 import './scss/dataTable.scss'
+import './scss/icons/icons.css'
 
 // js
 import notification from './js/notification'
 
 // components
+import spacer from './components/spacer/spacer'
 import inputText from './components/input/input_text.vue'
 import inputNumber from './components/input/input_number.vue'
 import inputEmail from './components/input/input_email.vue'
@@ -23,6 +25,7 @@ import inputMultiSelect from './components/input/input_multi_select.vue'
 import inputRadio from './components/input/input_radio.vue'
 import inputSwitch from './components/input/input_switch.vue'
 import dataTable from './components/table/table.vue'
+import textEditor from './components/textEditor/textEditor.vue'
 
 import autofill from './components/autofill/autofill.vue'
 import popover from './components/popover/popover.vue'
@@ -38,6 +41,7 @@ import tooltip from './dircetive/tooltip'
 
 export default {
   install (Vue) {
+    Vue.component('asw-spacer', spacer)
     Vue.component('asw-input-text', inputText)
     Vue.component('asw-input-number', inputNumber)
     Vue.component('asw-input-email', inputEmail)
@@ -52,6 +56,7 @@ export default {
     Vue.component('asw-popover', popover)
     Vue.component('asw-navbar', navbar)
     Vue.component('asw-data-table', dataTable)
+    Vue.component('asw-text-editor', textEditor)
 
     Vue.component('asw-json-tree', josnTree)
 
