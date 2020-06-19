@@ -1,0 +1,36 @@
+.asw {
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .justify-space-between {
+    justify-content: space-between;
+  }
+  .justify-space-even {
+    justify-content: space-evenly;
+  }
+  .justify-space-around {
+    justify-content: space-around;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .justify-left {
+    justify-content: flex-start;
+  }
+  .justify-right {
+    justify-content: flex-end;
+  }
+  .align-center {
+    align-items: center;
+  }
+  .align-start {
+    align-items: flex-start;
+  }
+  .align-end {
+    align-items: flex-end;
+  }
+  .align-baseline {
+    align-items: baseline;
+  }
+}

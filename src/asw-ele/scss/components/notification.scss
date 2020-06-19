@@ -1,0 +1,111 @@
+.aswNotificationContainer {
+  position: fixed;
+  width: 400px;
+  right: 0px;
+  top: 10px;
+  z-index: 99999;
+  .aswNotification {
+    &-primary {
+      color: #004085;
+      background-color: #cce5ff;
+      border-color: #b8daff;
+    }
+    &-secondary {
+      color: #383d41;
+      background-color: #e2e3e5;
+      border-color: #d6d8db;
+    }
+    &-success {
+      color: #155724;
+      background-color: #d4edda;
+      border-color: #c3e6cb;
+    }
+    &-danger {
+      color: #721c24;
+      background-color: #f8d7da;
+      border-color: #f5c6cb;
+    }
+    &-warning {
+      color: #856404;
+      background-color: #fff3cd;
+      border-color: #ffeeba;
+    }
+    &-info {
+      color: #0c5460;
+      background-color: #d1ecf1;
+      border-color: #bee5eb;
+    }
+    &-light {
+      color: #818182;
+      background-color: #fefefe;
+      border-color: #fdfdfe;
+    }
+    &-dark {
+      color: #1b1e21;
+      background-color: #d6d8d9;
+      border-color: #c6c8ca;
+    }
+    &-flag {
+      margin: 5px;
+      padding: 10px 20px;
+      width: 100%;
+      float: right;
+      border-radius: 0.5rem;
+      position: relative;
+      animation: openNotification 1s;
+    }
+    &-flag-out {
+      margin: 5px;
+      padding: 10px 0px;
+      width: 0%;
+      float: right;
+      border-radius: 0.5rem;
+      animation: closeNotification 1s;
+    }
+    &-close {
+      width: fit-content;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      font-size: 0.75rem;
+      cursor: pointer;
+    }
+    &-title {
+      font-weight: bolder;
+      font-size: 1rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &-text {
+      opacity: 0.75;
+      margin-top: 5px;
+      font-size: 0.8rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+@keyframes openNotification {
+  from {
+    width: 0%;
+    padding: 10px 0px;
+  }
+  to {
+    width: 100%;
+    padding: 10px 20px;
+  }
+}
+
+@keyframes closeNotification {
+  to {
+    width: 0%;
+    padding: 10px 0px;
+  }
+  from {
+    width: 100%;
+    padding: 10px 20px;
+  }
+}

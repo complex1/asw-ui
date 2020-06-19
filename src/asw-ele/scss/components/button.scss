@@ -1,0 +1,86 @@
+button {
+  border: 1px solid transparent;
+  letter-spacing: 1px;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  color: $light;
+  background-color: $default;
+}
+button:hover {
+  opacity: 80%;
+}
+button.asw-s {
+  font-size: 0.65rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid transparent;
+}
+button.asw-m {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9rem;
+  border-radius: 0.25rem;
+  border: 2px solid transparent;
+}
+button.asw-l {
+  padding: 0.375rem 0.75rem;
+  font-size: 1.3rem;
+  border-radius: 0.25rem;
+  border: 2px solid transparent;
+}
+button.text {
+  border: 0px none;
+}
+button.asw-primary {
+  background: $primary;
+  border-color: $primary;
+}
+button.asw-secondary {
+  background: $secondary;
+  border-color: $secondary;
+}
+button.asw-success {
+  background: $success;
+  border-color: $success;
+}
+button.asw-warning {
+  background: $warning;
+  border-color: $warning;
+}
+button.asw-danger {
+  background: $danger;
+  border-color: $danger;
+}
+button.asw-info {
+  background: $info;
+  border-color: $info;
+}
+button.asw-primary-outline {
+  background: transparent;
+  color: $primary;
+  border-color: $primary;
+}
+button.asw-secondary-outline {
+  background: transparent;
+  color: $secondary;
+  border-color: $secondary;
+}
+button.asw-success-outline {
+  background: transparent;
+  color: $success;
+  border-color: $success;
+}
+button.asw-warning-outline {
+  background: transparent;
+  color: $warning;
+  border-color: $warning;
+}
+button.asw-danger-outline {
+  background: transparent;
+  color: $danger;
+  border-color: $danger;
+}
+button.asw-info-outline {
+  background: transparent;
+  color: $info;
+  border-color: $info;
+}

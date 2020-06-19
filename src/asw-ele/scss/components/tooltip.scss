@@ -1,0 +1,628 @@
+
+ [class*="asw--"] {
+  position: relative;
+  display: inline-block;
+  /**
+	 * tooltip arrow
+	 */
+  /**
+	 * tooltip body
+	 */ }
+  [class*="asw--"]:before, [class*="asw--"]:after {
+    position: absolute;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1000000;
+    pointer-events: none;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    transition: 0.3s ease;
+    -webkit-transition-delay: 0ms;
+    -moz-transition-delay: 0ms;
+    transition-delay: 0ms; }
+  [class*="asw--"]:hover:before, [class*="asw--"]:hover:after {
+    visibility: visible;
+    opacity: 1; }
+  [class*="asw--"]:hover:before, [class*="asw--"]:hover:after {
+    -webkit-transition-delay: 100ms;
+    -moz-transition-delay: 100ms;
+    transition-delay: 100ms; }
+  [class*="asw--"]:before {
+    content: '';
+    position: absolute;
+    background: transparent;
+    border: 6px solid transparent;
+    z-index: 1000001; }
+  [class*="asw--"]:after {
+    background: #383838;
+    color: white;
+    padding: 8px 10px;
+    font-size: 12px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 12px;
+    white-space: nowrap; }
+  [class*="asw--"][aria-label]:after {
+    content: attr(aria-label); }
+  [class*="asw--"][data-asw]:after {
+    content: attr(data-asw); }
+
+[aria-label='']:before, [aria-label='']:after,
+[data-asw='']:before,
+[data-asw='']:after {
+  display: none !important; }
+
+/**
+ * source: asw-position.scss
+ *
+ * Defines the positoning logic for the tooltips.
+ *
+ * Classes added:
+ * 	1) asw--top
+ * 	2) asw--bottom
+ * 	3) asw--left
+ * 	4) asw--right
+ */
+/**
+ * set default color for tooltip arrows
+ */
+.asw--top-left:before {
+  border-top-color: #383838; }
+
+.asw--top-right:before {
+  border-top-color: #383838; }
+
+.asw--top:before {
+  border-top-color: #383838; }
+
+.asw--bottom-left:before {
+  border-bottom-color: #383838; }
+
+.asw--bottom-right:before {
+  border-bottom-color: #383838; }
+
+.asw--bottom:before {
+  border-bottom-color: #383838; }
+
+.asw--left:before {
+  border-left-color: #383838; }
+
+.asw--right:before {
+  border-right-color: #383838; }
+
+/**
+ * top tooltip
+ */
+.asw--top:before {
+  margin-bottom: -11px; }
+
+.asw--top:before, .asw--top:after {
+  bottom: 100%;
+  left: 50%; }
+
+.asw--top:before {
+  left: calc(50% - 6px); }
+
+.asw--top:after {
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+.asw--top:hover:before {
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  transform: translateY(-8px); }
+
+.asw--top:hover:after {
+  -webkit-transform: translateX(-50%) translateY(-8px);
+  -moz-transform: translateX(-50%) translateY(-8px);
+  transform: translateX(-50%) translateY(-8px); }
+
+/**
+ * bottom tooltip
+ */
+.asw--bottom:before {
+  margin-top: -11px; }
+
+.asw--bottom:before, .asw--bottom:after {
+  top: 100%;
+  left: 50%; }
+
+.asw--bottom:before {
+  left: calc(50% - 6px); }
+
+.asw--bottom:after {
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+.asw--bottom:hover:before {
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  transform: translateY(8px); }
+
+.asw--bottom:hover:after {
+  -webkit-transform: translateX(-50%) translateY(8px);
+  -moz-transform: translateX(-50%) translateY(8px);
+  transform: translateX(-50%) translateY(8px); }
+
+/**
+ * right tooltip
+ */
+.asw--right:before {
+  margin-left: -11px;
+  margin-bottom: -6px; }
+
+.asw--right:after {
+  margin-bottom: -14px; }
+
+.asw--right:before, .asw--right:after {
+  left: 100%;
+  bottom: 50%; }
+
+.asw--right:hover:before {
+  -webkit-transform: translateX(8px);
+  -moz-transform: translateX(8px);
+  transform: translateX(8px); }
+
+.asw--right:hover:after {
+  -webkit-transform: translateX(8px);
+  -moz-transform: translateX(8px);
+  transform: translateX(8px); }
+
+/**
+ * left tooltip
+ */
+.asw--left:before {
+  margin-right: -11px;
+  margin-bottom: -6px; }
+
+.asw--left:after {
+  margin-bottom: -14px; }
+
+.asw--left:before, .asw--left:after {
+  right: 100%;
+  bottom: 50%; }
+
+.asw--left:hover:before {
+  -webkit-transform: translateX(-8px);
+  -moz-transform: translateX(-8px);
+  transform: translateX(-8px); }
+
+.asw--left:hover:after {
+  -webkit-transform: translateX(-8px);
+  -moz-transform: translateX(-8px);
+  transform: translateX(-8px); }
+
+/**
+ * top-left tooltip
+ */
+.asw--top-left:before {
+  margin-bottom: -11px; }
+
+.asw--top-left:before, .asw--top-left:after {
+  bottom: 100%;
+  left: 50%; }
+
+.asw--top-left:before {
+  left: calc(50% - 6px); }
+
+.asw--top-left:after {
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  transform: translateX(-100%); }
+
+.asw--top-left:after {
+  margin-left: 12px; }
+
+.asw--top-left:hover:before {
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  transform: translateY(-8px); }
+
+.asw--top-left:hover:after {
+  -webkit-transform: translateX(-100%) translateY(-8px);
+  -moz-transform: translateX(-100%) translateY(-8px);
+  transform: translateX(-100%) translateY(-8px); }
+
+/**
+ * top-right tooltip
+ */
+.asw--top-right:before {
+  margin-bottom: -11px; }
+
+.asw--top-right:before, .asw--top-right:after {
+  bottom: 100%;
+  left: 50%; }
+
+.asw--top-right:before {
+  left: calc(50% - 6px); }
+
+.asw--top-right:after {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  transform: translateX(0); }
+
+.asw--top-right:after {
+  margin-left: -12px; }
+
+.asw--top-right:hover:before {
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  transform: translateY(-8px); }
+
+.asw--top-right:hover:after {
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  transform: translateY(-8px); }
+
+/**
+ * bottom-left tooltip
+ */
+.asw--bottom-left:before {
+  margin-top: -11px; }
+
+.asw--bottom-left:before, .asw--bottom-left:after {
+  top: 100%;
+  left: 50%; }
+
+.asw--bottom-left:before {
+  left: calc(50% - 6px); }
+
+.asw--bottom-left:after {
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  transform: translateX(-100%); }
+
+.asw--bottom-left:after {
+  margin-left: 12px; }
+
+.asw--bottom-left:hover:before {
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  transform: translateY(8px); }
+
+.asw--bottom-left:hover:after {
+  -webkit-transform: translateX(-100%) translateY(8px);
+  -moz-transform: translateX(-100%) translateY(8px);
+  transform: translateX(-100%) translateY(8px); }
+
+/**
+ * bottom-right tooltip
+ */
+.asw--bottom-right:before {
+  margin-top: -11px; }
+
+.asw--bottom-right:before, .asw--bottom-right:after {
+  top: 100%;
+  left: 50%; }
+
+.asw--bottom-right:before {
+  left: calc(50% - 6px); }
+
+.asw--bottom-right:after {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  transform: translateX(0); }
+
+.asw--bottom-right:after {
+  margin-left: -12px; }
+
+.asw--bottom-right:hover:before {
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  transform: translateY(8px); }
+
+.asw--bottom-right:hover:after {
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  transform: translateY(8px); }
+
+/**
+ * source: asw-sizes.scss
+ *
+ * Defines width restricted tooltips that can span
+ * across multiple lines.
+ *
+ * Classes added:
+ * 	1) asw--small
+ * 	2) asw--medium
+ * 	3) asw--large
+ *
+ */
+.asw--small:after,
+.asw--medium:after,
+.asw--large:after {
+  white-space: normal;
+  line-height: 1.4em;
+  word-wrap: break-word; }
+
+.asw--small:after {
+  width: 80px; }
+
+.asw--medium:after {
+  width: 150px; }
+
+.asw--large:after {
+  width: 300px; }
+
+/**
+ * source: asw-theme.scss
+ *
+ * Defines basic theme for tooltips.
+ *
+ */
+[class*="asw--"] {
+  /**
+	 * tooltip body
+	 */ }
+  [class*="asw--"]:after {
+    text-shadow: 0 -1px 0px black;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); }
+
+/**
+ * source: asw-color-types.scss
+ *
+ * Contains tooltips of various types based on color differences.
+ *
+ * Classes added:
+ * 	1) asw--error
+ * 	2) asw--warning
+ * 	3) asw--info
+ * 	4) asw--success
+ *
+ */
+/**
+ * Error
+ */
+.asw--error:after {
+  background-color: #b34e4d;
+  text-shadow: 0 -1px 0px #592726; }
+
+.asw--error.asw--top-left:before {
+  border-top-color: #b34e4d; }
+
+.asw--error.asw--top-right:before {
+  border-top-color: #b34e4d; }
+
+.asw--error.asw--top:before {
+  border-top-color: #b34e4d; }
+
+.asw--error.asw--bottom-left:before {
+  border-bottom-color: #b34e4d; }
+
+.asw--error.asw--bottom-right:before {
+  border-bottom-color: #b34e4d; }
+
+.asw--error.asw--bottom:before {
+  border-bottom-color: #b34e4d; }
+
+.asw--error.asw--left:before {
+  border-left-color: #b34e4d; }
+
+.asw--error.asw--right:before {
+  border-right-color: #b34e4d; }
+
+/**
+ * Warning
+ */
+.asw--warning:after {
+  background-color: #c09854;
+  text-shadow: 0 -1px 0px #6c5328; }
+
+.asw--warning.asw--top-left:before {
+  border-top-color: #c09854; }
+
+.asw--warning.asw--top-right:before {
+  border-top-color: #c09854; }
+
+.asw--warning.asw--top:before {
+  border-top-color: #c09854; }
+
+.asw--warning.asw--bottom-left:before {
+  border-bottom-color: #c09854; }
+
+.asw--warning.asw--bottom-right:before {
+  border-bottom-color: #c09854; }
+
+.asw--warning.asw--bottom:before {
+  border-bottom-color: #c09854; }
+
+.asw--warning.asw--left:before {
+  border-left-color: #c09854; }
+
+.asw--warning.asw--right:before {
+  border-right-color: #c09854; }
+
+/**
+ * Info
+ */
+.asw--info:after {
+  background-color: #3986ac;
+  text-shadow: 0 -1px 0px #1a3c4d; }
+
+.asw--info.asw--top-left:before {
+  border-top-color: #3986ac; }
+
+.asw--info.asw--top-right:before {
+  border-top-color: #3986ac; }
+
+.asw--info.asw--top:before {
+  border-top-color: #3986ac; }
+
+.asw--info.asw--bottom-left:before {
+  border-bottom-color: #3986ac; }
+
+.asw--info.asw--bottom-right:before {
+  border-bottom-color: #3986ac; }
+
+.asw--info.asw--bottom:before {
+  border-bottom-color: #3986ac; }
+
+.asw--info.asw--left:before {
+  border-left-color: #3986ac; }
+
+.asw--info.asw--right:before {
+  border-right-color: #3986ac; }
+
+/**
+ * Success
+ */
+.asw--success:after {
+  background-color: #458746;
+  text-shadow: 0 -1px 0px #1a321a; }
+
+.asw--success.asw--top-left:before {
+  border-top-color: #458746; }
+
+.asw--success.asw--top-right:before {
+  border-top-color: #458746; }
+
+.asw--success.asw--top:before {
+  border-top-color: #458746; }
+
+.asw--success.asw--bottom-left:before {
+  border-bottom-color: #458746; }
+
+.asw--success.asw--bottom-right:before {
+  border-bottom-color: #458746; }
+
+.asw--success.asw--bottom:before {
+  border-bottom-color: #458746; }
+
+.asw--success.asw--left:before {
+  border-left-color: #458746; }
+
+.asw--success.asw--right:before {
+  border-right-color: #458746; }
+
+/**
+ * source: asw-always.scss
+ *
+ * Defines a persisted tooltip which shows always.
+ *
+ * Classes added:
+ * 	1) asw--always
+ *
+ */
+.asw--always:after, .asw--always:before {
+  opacity: 1;
+  visibility: visible; }
+
+.asw--always.asw--top:before {
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  transform: translateY(-8px); }
+
+.asw--always.asw--top:after {
+  -webkit-transform: translateX(-50%) translateY(-8px);
+  -moz-transform: translateX(-50%) translateY(-8px);
+  transform: translateX(-50%) translateY(-8px); }
+
+.asw--always.asw--top-left:before {
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  transform: translateY(-8px); }
+
+.asw--always.asw--top-left:after {
+  -webkit-transform: translateX(-100%) translateY(-8px);
+  -moz-transform: translateX(-100%) translateY(-8px);
+  transform: translateX(-100%) translateY(-8px); }
+
+.asw--always.asw--top-right:before {
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  transform: translateY(-8px); }
+
+.asw--always.asw--top-right:after {
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  transform: translateY(-8px); }
+
+.asw--always.asw--bottom:before {
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  transform: translateY(8px); }
+
+.asw--always.asw--bottom:after {
+  -webkit-transform: translateX(-50%) translateY(8px);
+  -moz-transform: translateX(-50%) translateY(8px);
+  transform: translateX(-50%) translateY(8px); }
+
+.asw--always.asw--bottom-left:before {
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  transform: translateY(8px); }
+
+.asw--always.asw--bottom-left:after {
+  -webkit-transform: translateX(-100%) translateY(8px);
+  -moz-transform: translateX(-100%) translateY(8px);
+  transform: translateX(-100%) translateY(8px); }
+
+.asw--always.asw--bottom-right:before {
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  transform: translateY(8px); }
+
+.asw--always.asw--bottom-right:after {
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  transform: translateY(8px); }
+
+.asw--always.asw--left:before {
+  -webkit-transform: translateX(-8px);
+  -moz-transform: translateX(-8px);
+  transform: translateX(-8px); }
+
+.asw--always.asw--left:after {
+  -webkit-transform: translateX(-8px);
+  -moz-transform: translateX(-8px);
+  transform: translateX(-8px); }
+
+.asw--always.asw--right:before {
+  -webkit-transform: translateX(8px);
+  -moz-transform: translateX(8px);
+  transform: translateX(8px); }
+
+.asw--always.asw--right:after {
+  -webkit-transform: translateX(8px);
+  -moz-transform: translateX(8px);
+  transform: translateX(8px); }
+
+/**
+ * source: asw-rounded.scss
+ *
+ * Defines rounded corner tooltips.
+ *
+ * Classes added:
+ * 	1) asw--rounded
+ *
+ */
+.asw--rounded:after {
+  border-radius: 4px; }
+
+/**
+ * source: asw-effects.scss
+ *
+ * Defines various transition effects for the tooltips.
+ *
+ * Classes added:
+ * 	1) asw--no-animate
+ * 	2) asw--bounce
+ *
+ */
+.asw--no-animate:before, .asw--no-animate:after {
+  -webkit-transition-duration: 0ms;
+  -moz-transition-duration: 0ms;
+  transition-duration: 0ms; }
+
+.asw--bounce:before, .asw--bounce:after {
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease, -webkit-transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  -moz-transition: opacity 0.3s ease, visibility 0.3s ease, -moz-transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24); }
+
+.asw--no-shadow:before, .asw--no-shadow:after {
+  text-shadow: initial;
+  box-shadow: initial; }

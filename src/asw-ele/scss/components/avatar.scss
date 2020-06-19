@@ -1,0 +1,24 @@
+.asw {
+  .asw-avatar {
+    width: 2.5em;
+    height: 2.5em;
+    font-weight: bold;
+    background-color: $default;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .asw-avatar > img {
+    width: 100%;
+    height: 100%;
+  }
+  .asw-avatar.round {
+    border-radius: 50%;
+  }
+  .asw-avatar.box {
+    border-radius: 0.2em;
+  }
+}

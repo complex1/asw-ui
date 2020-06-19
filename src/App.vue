@@ -1,95 +1,76 @@
 <template>
-  <div id="app">
-    <nav></nav>
-    <div class="container-fluid np light">
-      <div class="row np nm">
-        <div class="col-md-2 np">
-          <h3>ELEMENTS</h3>
-          <ul class="np nm">
-            <li
-              class="sidebar-option"
-              v-for="(val, key) in option"
-              :key="val.id"
-              @click="comp = key"
-            >{{val}}</li>
-          </ul>
-        </div>
-        <div class="col-md-8 np" style="margin-bottom: 100px;">
-          <component :is="comp" />
-        </div>
+  <div id="app " class="asw">
+    <div class="row">
+      <div class="doc-sidebar col-2">
+        <h4>Documents</h4>
+        <a
+          v-for="i in getDocList"
+          :key="i.id"
+          @click="selectedComp = i"
+        >{{i.replace(/[A-Z]/g, (e) => ` ${e}`).trim().slice(0,-3)}}</a>
+      </div>
+      <div class="doc-container col-10">
+        <component :is="selectedComp" />
       </div>
     </div>
   </div>
 </template>
+
 <script>
 export default {
-  components: {
-    Test: () => import('@/views/test.vue'),
-    Button: () => import('@/views/button.vue'),
-    Input: () => import('@/views/input.vue'),
-    Select: () => import('@/views/select.vue'),
-    Modal: () => import('@/views/modal.vue'),
-    Elevation: () => import('@/views/elevation.vue'),
-    Notification: () => import('@/views/Notification.vue'),
-    AutoFill: () => import('@/views/autofill.vue'),
-    JsonTree: () => import('@/views/jsonTree.vue'),
-    Popover: () => import('@/views/popover.vue'),
-    Avatar: () => import('@/views/avatar.vue'),
-    Sparkline: () => import('@/views/sparkline.vue'),
-    MoveBlock: () => import('@/views/moveblock.vue'),
-    DragDrop: () => import('@/views/dragDrop.vue'),
-    Popup: () => import('@/views/popup.vue'),
-    Directive: () => import('@/views/directive.vue'),
-    Navbar: () => import('@/views/navbar.vue'),
-    Table: () => import('@/views/table.vue'),
-    TextEditor: () => import('@/views/textEditor.vue'),
-    Icons: () => import('@/views/icons.vue'),
-    Class: () => import('@/views/class.vue')
-  },
+  name: 'App',
+  components: {},
   data: () => {
     return {
-      comp: 'Icons',
-      option: {
-        Button: 'Button',
-        Input: 'Input',
-        Select: 'Select',
-        Modal: 'Modal',
-        Elevation: 'Elevation',
-        Notification: 'Notification',
-        AutoFill: 'AUTO Fill',
-        JsonTree: 'Json Tree',
-        Popover: 'Popover',
-        Avatar: 'Avatar',
-        Sparkline: 'Sparkline',
-        MoveBlock: 'Move Block',
-        DragDrop: 'Drag Drop',
-        Popup: 'Popup',
-        Directive: 'Directive',
-        Navbar: 'Navbar',
-        Table: 'Table',
-        TextEditor: 'Text Editor',
-        Icons: 'Icons',
-        Class: 'Class'
-      }
+      selectedComp: ''
+    }
+  },
+  computed: {
+    getDocList () {
+      return window.elementList
     }
   }
 }
 </script>
+
 <style lang="scss">
+.doc-sidebar {
+  background: #f5f3f3;
+  padding: 20px;
+  height: 100vh;
+  overflow: auto;
+  a {
+    display: block;
+    padding: 5px 10px;
+    background: #9a96962e;
+    margin-right: -15px;
+    margin-bottom: -1px;
+    border: 1px solid #c1c1c1;
+  }
+}
+.doc-container {
+  padding: 10px 30px !important;
+  margin: 10px auto;
+  padding-bottom: 50px;
+  height: 100vh;
+  overflow: auto;
+}
+.css-class-chip {
+  display: block;
+  padding: 2px 10px;
+  background: #f3f1ef;
+  margin: 5px;
+  border-radius: 8px;
+}
 .CodeMirror {
-  height: auto !important;
-}
-nav {
-  height: 60px;
-  background: #32333333;
-}
-.sidebar-option {
-  text-align: left;
-  text-decoration: none;
-  list-style: none;
-  padding: 5px 12px;
-  border: 1px solid #d9d9d9;
-  margin-right: 15px;
-  background: #d9d9d966;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    background: white;
+    height: auto !important;
+    min-height: 100px !important;
+    overflow: auto !important;
+    border: 1px solid #c1c1c1;
+    border-radius: 10px;
 }
 </style>

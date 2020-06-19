@@ -1,0 +1,55 @@
+.asw {
+  .asw-input {
+    input,select {
+      font-size: inherit;
+      padding: 0.4em 10px;
+      border: 1px solid;
+      border-radius: 0.4em;
+      border-color: $border-color;
+      color: inherit;
+    }
+    input[type="color"] {
+      padding: 2px !important;
+    }
+    .active {
+      input {
+        border-color: $active-border-color;
+      }
+    }
+    .success {
+      input {
+        border-color: $success-border-color;
+      }
+    }
+    .info {
+      input {
+        border-color: $info-border-color;
+      }
+    }
+    .warning {
+      input {
+        border-color: $warning-border-color;
+      }
+    }
+    .danger {
+      input {
+        border-color: $danger-border-color;
+      }
+    }
+    label {
+      font-size: 1em;
+    }
+    p {
+      font-size: 0.65em;
+      margin: 0.5em 0em;
+    }
+    label > b {
+      color: red;
+      margin-right: 10px;
+    }
+    .asw-block {
+      width: 100% !important;
+      display: block;
+    }
+  }
+}

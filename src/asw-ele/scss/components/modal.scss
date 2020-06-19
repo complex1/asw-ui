@@ -1,0 +1,15 @@
+.asw-modal {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000ab;
+  z-index: 9999;
+}
+.asw-modal > div {
+  background: #fff;
+}

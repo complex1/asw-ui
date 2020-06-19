@@ -1,0 +1,64 @@
+@import './parent/_grid.scss';
+@import './parent/_spacing.scss';
+@import './parent/_vars.scss';
+@import './parent/_colors-vars.scss';
+
+// dependent component
+@import './common/flexBox.scss';
+@import './common/panel.scss';
+@import './common/text.scss';
+@import './common/elevation.scss';
+
+// component scss
+@import './components/tooltip.scss';
+@import './components/input.scss';
+@import './components//button.scss';
+@import './components/modal.scss';
+@import './components/notification.scss';
+@import './components/avatar.scss';
+@import './components/popup.scss';
+
+@font-face {
+  font-family: 'montserrat_black';
+  src: url('./font/Montserrat-Black.ttf');
+}
+@font-face {
+  font-family: 'montserrat_bold';
+  src: url('./font/Montserrat-Bold.ttf');
+}
+@font-face {
+  font-family: 'montserrat_extra_bold';
+  src: url('./font/Montserrat-ExtraBold.ttf');
+}
+@font-face {
+  font-family: 'montserrat_light';
+  src: url('./font/Montserrat-Light.ttf');
+}
+@font-face {
+  font-family: 'montserrat_medium';
+  src: url('./font/Montserrat-Medium.ttf');
+}
+@font-face {
+  font-family: 'montserrat';
+  src: url('./font/Montserrat-Regular.ttf');
+}
+@font-face {
+  font-family: 'montserrat_semi_bold';
+  src: url('./font/Montserrat-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'montserrat_thin';
+  src: url('./font/Montserrat-Thin.ttf');
+}
+
+html, body {
+  font-family: montserrat;
+  color: $dark;
+  font-size: 14px;
+}
+*{
+  outline: none !important;
+  box-sizing: border-box !important;
+  border-spacing: 0px !important;
+  border-collapse: collapse !important;
+}

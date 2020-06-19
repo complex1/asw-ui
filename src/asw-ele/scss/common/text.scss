@@ -1,0 +1,87 @@
+.asw{
+  .dark {
+    color: $dark
+  }
+  .light {
+    color: $light;
+  }
+  .text-default {
+    color: $dark;
+  }
+  .text-primary {
+    color: $primary;
+  }
+  .text-secondary {
+    color: $secondary;
+  }
+  .text-success {
+    color: $success;
+  }
+  .text-info {
+    color: $info;
+  }
+  .text-warning {
+    color: $warning;
+  }
+  .text-danger {
+    color: $danger;
+  }
+  
+  .xs {
+    font-size: 0.5rem;
+  }
+  .s {
+    font-size: 0.80rem;
+  }
+  .m {
+    font-size: 1rem;
+  }
+  .l {
+    font-size: 1.25rem;
+  }
+  .xl {
+    font-size: 1.5rem;
+  }
+  .xxl {
+    font-size: 2rem;
+  }
+  .text-left {
+    text-align: left;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .float-left {
+    float: left;
+  }
+  .float-center {
+    float: center;
+  }
+  .float-right {
+    float: right;
+  }
+  .undeline {
+    text-decoration: underline;
+  }
+  .overline {
+    text-decoration: overline;
+  }
+  .cut {
+    text-decoration: line-through;
+  }
+  .lowercase {
+    text-transform: lowercase;
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  .light {
+    font-weight: lighter;
+  }
+}

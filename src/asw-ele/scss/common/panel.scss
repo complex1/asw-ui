@@ -1,0 +1,31 @@
+.asw {
+  .bg-dark {
+    background: $dark !important;
+  }
+  .bg-light {
+    background: $light !important
+  }
+  .bg-primary {
+    background: $primary !important
+  }
+  .bg-secondary {
+    background: $secondary !important
+  }
+  .bg-success {
+    background: $success !important
+  }
+  .bg-info {
+    background: $info !important
+  }
+  .bg-warning {
+    background: $warning !important
+  }
+  .bg-danger {
+    background: $danger !important
+  }
+  .center-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
