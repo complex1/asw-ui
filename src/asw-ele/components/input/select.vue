@@ -6,7 +6,8 @@
       :class="block ? 'asw-block' : ''"
       v-on="listeners"
       v-bind="$attrs"
-      :value="value"
+      v-model="bindData"
+      @change="$emit('input', bindData)"
     >
       <option v-for="i in getOptionArray" :key="i.id" :value="i.value">{{i.label}}</option>
     </select>

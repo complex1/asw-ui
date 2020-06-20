@@ -1,6 +1,6 @@
 .asw {
   .asw-input {
-    input,select {
+    input, textarea,select {
       font-size: inherit;
       padding: 0.4em 10px;
       border: 1px solid;
@@ -12,27 +12,27 @@
       padding: 2px !important;
     }
     .active {
-      input {
+      input, textarea {
         border-color: $active-border-color;
       }
     }
     .success {
-      input {
+      input, textarea {
         border-color: $success-border-color;
       }
     }
     .info {
-      input {
+      input, textarea {
         border-color: $info-border-color;
       }
     }
     .warning {
-      input {
+      input, textarea {
         border-color: $warning-border-color;
       }
     }
     .danger {
-      input {
+      input, textarea {
         border-color: $danger-border-color;
       }
     }

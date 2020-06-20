@@ -3,7 +3,7 @@ export default {
   inheritAttrs: false,
   mixins: [commonMixins],
   props: {
-    value: String,
+    value: [String, Number, Array, Object],
     size: {
       type: String,
       default: 'm'
@@ -33,12 +33,17 @@ export default {
       default: ''
     }
   },
+  data: function () {
+    return {
+      bindData: ''
+    }
+  },
   computed: {
     listeners () {
       return {
         ...this.$listeners,
         input: event => {
-          this.$emit('input', event.target.value)
+          this.$emit('input', this.bindData)
         }
       }
     },
@@ -55,5 +60,13 @@ export default {
         }
       }
     }
+  },
+  watch: {
+    value () {
+      this.bindData = this.value
+    }
+  },
+  created () {
+    this.bindData = this.value
   }
 }

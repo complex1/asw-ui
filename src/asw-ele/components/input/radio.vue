@@ -3,7 +3,7 @@
     <label v-if="label !== ''"> {{label}} <b v-if="imp">*</b> </label>
     <p v-if="sublabel !== ''">{{sublabel}}</p>
     <div v-for="i in getOptionArray" :key="i.id" >
-      <input type="radio" v-bind="$attrs" v-on="listeners" :name="_uid" :id="i.id" :value="i.value">
+      <input type="radio" v-bind="$attrs" v-on="listeners" v-model="bindData" :name="_uid" :id="i.id" :value="i.value">
       <label :for="i.id">{{i.label}}</label>
     </div>
     <br v-if="!block">

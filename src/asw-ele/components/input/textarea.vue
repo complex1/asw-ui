@@ -5,7 +5,7 @@
       <b v-if="imp">*</b>
     </label>
     <p v-if="sublabel !== ''">{{sublabel}}</p>
-    <input :style="{width: width}" v-model="bindData"  :class="block ? 'asw-block' : ''" v-on="listeners" v-bind="$attrs" />
+    <textarea :style="{width: width}" v-model="bindData" :class="block ? 'asw-block' : ''" v-on="listeners" v-bind="$attrs" />
     <br v-if="!block" />
     <small :class="'text-' + getMessage.class">{{getMessage.msg}}</small>
   </div>

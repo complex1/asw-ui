@@ -1,0 +1,22 @@
+{
+  "name": "asw-ele",
+  "version": "1.0.0",
+  "description": "'for faad UI element'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/complex1/asw-ui.git"
+  },
+  "keywords": [
+    "ui"
+  ],
+  "author": "shubham maurya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/complex1/asw-ui/issues"
+  },
+  "homepage": "https://github.com/complex1/asw-ui#readme"
+}

@@ -157,8 +157,6 @@ export default {
       return properties
     },
     getTemplate () {
-      // const tag = node.componentOptions.tag
-      // return `<${tag}></<${tag}>`
       const components = this.$slots.default && this.$slots.default.filter(vnode => vnode.tag !== undefined)
       const loadedComponents = []
       if (!components) {
