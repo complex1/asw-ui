@@ -1,4 +1,4 @@
-import { validColor } from '@/asw-ele/utills/color.js'
+import { validColor } from '../../utills/color'
 export default {
   props: {
     color: {

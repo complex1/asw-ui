@@ -1,0 +1,22 @@
+.asw-chip {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  background: $default;
+  padding: 0.2em 0.5em;
+  border-radius: 1em;
+  cursor: default;
+  svg {
+    margin-right: 0.25em
+  }
+}
+.asw-chip.round {
+  border-radius: 1em !important;
+}
+.asw-chip.box {
+    border-radius: 0px !important;
+}
+.asw-chip.tile {
+  border-radius: 0.25em !important;
+}

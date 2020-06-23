@@ -1,0 +1,33 @@
+.asw {
+  .asw--badges-value {
+    bottom: calc(100% - 4px);
+    left: calc(100% - 4px);
+    right: auto;
+    top: auto;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 10px;
+    height: 20px;
+    letter-spacing: 0;
+    min-width: 20px;
+    padding: 4px 6px;
+    pointer-events: auto;
+    position: absolute;
+    text-align: center;
+    text-indent: 0;
+    top: auto;
+    transition: .3s cubic-bezier(.25,.8,.5,1);
+    white-space: nowrap;
+    background: $default;
+  }
+  .asw--badges-pointer {
+    bottom: calc(100% - 4px);
+    left: 100%;
+    right: auto;
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+    transition: .3s cubic-bezier(.25,.8,.5,1);
+    background: $default;
+  }
+}

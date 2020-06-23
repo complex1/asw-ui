@@ -3,6 +3,8 @@ import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
 import Notification from './plugin/notification'
 import popup from './plugin/popup'
+import badges from './directive/badges'
+
 const requiredComponent = require.context('./components', true, /\.vue$/)
 requiredComponent.keys().forEach(fileName => {
   // get component config
@@ -26,3 +28,4 @@ Vue.mixin({
   }
 })
 Vue.mixin(popup)
+Vue.directive('badges', badges)

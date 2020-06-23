@@ -1,6 +1,8 @@
 .asw {
   .asw-input {
-    input, textarea,select {
+    input,
+    textarea,
+    select {
       font-size: inherit;
       padding: 0.4em 10px;
       border: 1px solid;
@@ -11,45 +13,50 @@
     input[type="color"] {
       padding: 2px !important;
     }
-    .active {
-      input, textarea {
-        border-color: $active-border-color;
-      }
+  }
+  .active {
+    input,
+    textarea {
+      border-color: $active-border-color;
     }
-    .success {
-      input, textarea {
-        border-color: $success-border-color;
-      }
+  }
+  .success {
+    input,
+    textarea {
+      border-color: $success-border-color;
     }
-    .info {
-      input, textarea {
-        border-color: $info-border-color;
-      }
+  }
+  .info {
+    input,
+    textarea {
+      border-color: $info-border-color;
     }
-    .warning {
-      input, textarea {
-        border-color: $warning-border-color;
-      }
+  }
+  .warning {
+    input,
+    textarea {
+      border-color: $warning-border-color;
     }
-    .danger {
-      input, textarea {
-        border-color: $danger-border-color;
-      }
+  }
+  .danger {
+    input,
+    textarea {
+      border-color: $danger-border-color;
     }
-    label {
-      font-size: 1em;
-    }
-    p {
-      font-size: 0.65em;
-      margin: 0.5em 0em;
-    }
-    label > b {
-      color: red;
-      margin-right: 10px;
-    }
-    .asw-block {
-      width: 100% !important;
-      display: block;
-    }
+  }
+  label {
+    font-size: 1em;
+  }
+  p {
+    font-size: 0.65em;
+    margin: 0.5em 0em;
+  }
+  label > b {
+    color: red;
+    margin-right: 10px;
+  }
+  .asw-block {
+    width: 100% !important;
+    display: block;
   }
 }

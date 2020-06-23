@@ -3,7 +3,7 @@ export default {
   inheritAttrs: false,
   mixins: [commonMixins],
   props: {
-    value: [String, Number, Array, Object],
+    value: [String, Number, Array, Object, Boolean],
     size: {
       type: String,
       default: 'm'
@@ -43,6 +43,9 @@ export default {
       return {
         ...this.$listeners,
         input: event => {
+          this.$emit('input', this.bindData)
+        },
+        change: event => {
           this.$emit('input', this.bindData)
         }
       }
