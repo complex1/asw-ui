@@ -27,7 +27,6 @@
         <asw-input-box type="color" class="m-1"/>
         <asw-input-box type="date" class="m-1"/>
         <asw-input-box type="time" class="m-1"/>
-        <asw-input-box type="file" class="m-1"/>
         <asw-input-box type="checkbox" class="m-1"/>
       </div>
       <div v-if="index === 3">
@@ -76,7 +75,6 @@ export default {
 <asw-input-box type="color" class="m-1"/>
 <asw-input-box type="date" class="m-1"/>
 <asw-input-box type="time" class="m-1"/>
-<asw-input-box type="file" class="m-1"/>
 <asw-input-box type="checkbox" class="m-1"/>
 
           `

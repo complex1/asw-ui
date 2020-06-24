@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import { validColor } from '../../utills/color'
 export default {
   props: {
     type: {
@@ -55,7 +56,7 @@ export default {
       return {
         width: width + 'px',
         height: '100%',
-        backgroundColor: this.fill
+        backgroundColor: validColor(this.fill, '#007bff')
       }
     }
   },
