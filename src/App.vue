@@ -62,15 +62,4 @@ export default {
   margin: 5px;
   border-radius: 8px;
 }
-.CodeMirror {
-    margin: 10px;
-    position: relative;
-    overflow: hidden;
-    background: white;
-    height: auto !important;
-    min-height: 100px !important;
-    overflow: auto !important;
-    border: 1px solid #c1c1c1;
-    border-radius: 10px;
-}
 </style>

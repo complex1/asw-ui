@@ -1,6 +1,6 @@
 {
   "name": "asw-ele2",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "'for faad UI element'",
   "main": "index.js",
   "scripts": {
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/complex1/asw-ui/issues"
   },
-  "homepage": "https://github.com/complex1/asw-ui#readme"
+  "homepage": "https://github.com/complex1/asw-ui#readme",
+  "dependencies": {
+    "jshint": "^2.11.1"
+  }
 }

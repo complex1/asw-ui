@@ -1,5 +1,5 @@
 <template>
-  <codemirror v-model="code" :options="option"></codemirror>
+  <codemirror class="my-doc-code" v-model="code" :options="option"></codemirror>
 </template>
 
 <script>
@@ -24,6 +24,17 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" >
+.my-doc-code {
+  .CodeMirror {
+      margin: 10px;
+      width: auto !important;
+      height: auto !important;
+      min-height: 100px !important;
+      overflow: auto !important;
+      overflow-x: auto !important;
+      border: 1px solid #c1c1c1;
+      border-radius: 10px;
+  }
+}
 </style>

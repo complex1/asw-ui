@@ -79,9 +79,21 @@
     text-transform: uppercase;
   }
   .bold {
-    font-weight: bold;
+    font-family: $font-bold;
   }
-  .light {
-    font-weight: lighter;
+  .bolder {
+    font-family: $font-black;
+  }
+  .normal {
+    font-family: $font;
+  }
+  .medium {
+    font-family: $font-medium;
+  }
+  .semi-bold {
+    font-family: $font-semi-bold;
+  }
+  .thin {
+    font-weight: $font-thin;
   }
 }
