@@ -21,7 +21,8 @@
 </template>
 
 <script>
-import iconlist from './jsonData/iconList.json'
+import allIcon from '@/asw-ele/components/icon/icon-list.js'
+const iconlist = Object.keys(allIcon)
 export default {
   data: function () {
     return {

@@ -1,26 +1,29 @@
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    :viewBox="getIcon.viewBox"
     :style="{height: size + 'px', width: size + 'px'}"
-    :fill="getColor"
-    @click="$emit('click')"
+    :fill="color"
+    v-on="listeners"
+    v-bind="$attrs"
   >
-  <path :d="getIcon"/>
+  <path />
   </svg>
 </template>
 
 <script>
-import icons from './defIcon.json'
-import { validColor } from '../../utills/color'
+import icons from './icon-list.js'
 export default {
+  inheritAttrs: false,
   props: {
     icon: {
       type: String,
       default: 'home'
     },
     size: {
-      type: Number,
+      type: [Number, String],
       default: 24
     },
     color: {
@@ -29,14 +32,27 @@ export default {
     }
   },
   computed: {
-    getColor () {
-      return validColor(this.color, '#000000')
-    },
     getIcon () {
       if (this.icon in icons) {
         return icons[this.icon]
       } else {
-        return ''
+        return {
+          viewBox: '0 0 0 0',
+          d: ''
+        }
+      }
+    },
+    listeners () {
+      return {
+        ...this.$listeners
+      }
+    }
+  },
+  mounted () {
+    const ele = this.$el.childNodes[0]
+    for (const attr in this.getIcon) {
+      if (attr !== 'viewBox') {
+        ele.setAttribute(attr, this.getIcon[attr])
       }
     }
   }
