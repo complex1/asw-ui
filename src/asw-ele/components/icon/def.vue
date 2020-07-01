@@ -48,13 +48,24 @@ export default {
       }
     }
   },
-  mounted () {
-    const ele = this.$el.childNodes[0]
-    for (const attr in this.getIcon) {
-      if (attr !== 'viewBox') {
-        ele.setAttribute(attr, this.getIcon[attr])
+  methods: {
+    iconRender () {
+      const ele = this.$el.childNodes[0]
+      console.log(JSON.stringify(icons))
+      for (const attr in this.getIcon) {
+        if (attr !== 'viewBox') {
+          ele.setAttribute(attr, this.getIcon[attr])
+        }
       }
     }
+  },
+  watch: {
+    icon () {
+      this.iconRender()
+    }
+  },
+  mounted () {
+    this.iconRender()
   }
 }
 </script>

@@ -12,6 +12,7 @@
 import CodeMirror from 'vue-codemirror'
 import { JSHINT } from 'jshint'
 import 'codemirror/mode/javascript/javascript'
+import 'codemirror/mode/xml/xml.js'
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/idea.css'
 import 'codemirror/theme/material.css'
@@ -134,6 +135,9 @@ export default {
   .CodeMirror {
     border: 1px solid #e6e3e3;
     border-radius: 0.25em;
+  }
+  .CodeMirror-lint-tooltip {
+    z-index: 100000;
   }
 }
 </style>

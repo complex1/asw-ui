@@ -5,7 +5,7 @@
       <asw-code/>
     </my-doc>
     <hr>
-    <asw-code v-model="data" />
+    <asw-code v-model="data" mode="xml" :options='{htmlMode: true}' />
     {{data}}
   </div>
 </template>
