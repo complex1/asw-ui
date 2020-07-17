@@ -1,13 +1,7 @@
 /* eslint-disable promise/param-names */
-import aswApproverPopup from './aswApprover'
-import aswInputPopup from './aswInput'
+import ApproverPopup from './aswApprover'
+import InputPopup from './aswInput'
 export default {
-  methods: {
-    $aswApproverPopup (msg) {
-      return aswApproverPopup(msg)
-    },
-    $aswInputPopup (title) {
-      return aswInputPopup(title)
-    }
-  }
+  ApproverPopup,
+  InputPopup
 }

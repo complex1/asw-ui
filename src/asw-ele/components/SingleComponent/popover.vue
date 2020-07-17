@@ -6,7 +6,7 @@
     <div v-if="show" class="pophover-box asw-ele-1" :style="popBoxStyle" >
         <slot name="option" />
     </div>
-    <div v-if="show" class="box-arrow " :class="boxArrow" :style="popArrowStyle"></div>
+    <div v-if="show && hasArrow" class="box-arrow " :class="boxArrow" :style="popArrowStyle"></div>
   </div>
 </template>
 
@@ -17,6 +17,10 @@ export default {
     pos: {
       type: String,
       default: 'right'
+    },
+    hasArrow: {
+      type: Boolean,
+      default: true
     }
   },
   data: function () {
@@ -77,7 +81,7 @@ export default {
         this.popBoxStyle.left = -5 + 'px'
         this.popBoxStyle.right = undefined
         this.popBoxStyle.bottom = undefined
-      } else if (this.pos === 'right-up') {
+      } else if (this.pos === 'up-right') {
         this.popArrowStyle.top = 10 + 'px'
         this.popArrowStyle.left = box.width + 5 + 'px'
         this.popArrowStyle.right = undefined
@@ -86,6 +90,15 @@ export default {
         this.popBoxStyle.left = box.width + 10 + 'px'
         this.popBoxStyle.right = undefined
         this.popBoxStyle.bottom = -5 + 'px'
+      } else if (this.pos === 'bottom-left') {
+        this.popArrowStyle.top = box.height + 5 + 'px'
+        this.popArrowStyle.left = undefined
+        this.popArrowStyle.right = '0px'
+        this.popArrowStyle.bottom = undefined
+        this.popBoxStyle.top = box.height + 10 + 'px'
+        this.popBoxStyle.left = undefined
+        this.popBoxStyle.right = -5 + 'px'
+        this.popBoxStyle.bottom = undefined
       }
       this.show = !this.show
     },
@@ -110,6 +123,8 @@ export default {
       } else if (dir === 'top') {
         return 'top-box-arrow'
       } else if (dir === 'bottom') {
+        return 'bottom-box-arrow'
+      } else if (dir === 'bottom-left') {
         return 'bottom-box-arrow'
       } else {
         return 'right-box-arrow'

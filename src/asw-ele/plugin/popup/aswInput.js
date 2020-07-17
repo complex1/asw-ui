@@ -8,7 +8,7 @@ const showPopup = function (title) {
       <div>${title}</div>
       <input type="text" class="asw-inputpopup-text " id="asw_inputPopup_text" placeholder="" />
     </div>
-    <div class="asw-inputpop-button f-r">
+    <div class="asw-inputpop-button float-right">
     <button id="asw_inputpopup_cancel" class=" mx-2 dark asw-alert" >Cancel</button>
     <button id="asw_inputpopup_ok" class="dark asw-success">OK</button>
     </div>

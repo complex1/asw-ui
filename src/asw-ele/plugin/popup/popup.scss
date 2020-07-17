@@ -12,7 +12,9 @@
   .asw-inputpopup-box.remove-popup {
     animation: 1s ease-out 0s 1 aswPopupClose;
   }
-
+  .asw-inputpop-button{
+    float: right;
+  }
   .asw-inputpopup-message {
     margin-bottom: 20px;
   }
@@ -37,6 +39,9 @@
 
     position: relative;
     animation: 1s ease-out 0s 1 aswPopupOpen;
+  }
+  .asw-approvepop-button {
+    float: right;
   }
   .asw-approvepopup-box.remove-popup {
     animation: 1s ease-out 0s 1 aswPopupClose;

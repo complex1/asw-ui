@@ -1,3 +1,4 @@
+
 const GetParentAlert = function () {
   const container = document.getElementById('aswNotificationContainer')
   if (container === null) {
@@ -51,6 +52,4 @@ const OpenNotification = function (config) {
   setTimeout(closeNotification, timeout - 1000)
 }
 
-export default {
-  OpenNotification
-}
+export default OpenNotification

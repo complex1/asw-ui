@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
-import Notification from './plugin/notification'
-import popup from './plugin/popup'
 import badges from './directive/badges'
 
 const requiredComponent = require.context('./components', true, /\.vue$/)
@@ -19,13 +17,4 @@ requiredComponent.keys().forEach(fileName => {
   componentName = componentName.replace(/SingleComponent/, '')
   Vue.component(componentName, componentConfig.default || componentConfig)
 })
-
-Vue.mixin({
-  methods: {
-    $ShowNotification (config) {
-      Notification.OpenNotification(config)
-    }
-  }
-})
-Vue.mixin(popup)
 Vue.directive('badges', badges)
