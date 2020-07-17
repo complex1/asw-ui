@@ -27,6 +27,12 @@
           </template>
           <template v-slot:option>this is popover text</template>
         </asw-popover>
+        <asw-popover pos="bottom-left">
+          <template v-slot:title>
+            <button class="mx-1">bottom left popover</button>
+          </template>
+          <template v-slot:option>this is popover text</template>
+        </asw-popover>
       </div>
     </doc-code>
   </div>

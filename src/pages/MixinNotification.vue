@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import '../asw-ele/plugin/notification/notification.scss'
+import notification from '../asw-ele/plugin/notification'
 export default {
   data: function () {
     return {
@@ -28,6 +30,9 @@ export default {
         @click="click(i)"
       >{{i}}</button>
 
+import 'asw-ele/plugin/notification/notification.scss'
+import notification from 'asw-ele/plugin/notification'
+
   vari: [
     'primary',
     'secondary',
@@ -37,7 +42,7 @@ export default {
     'info'
   ]
   click (i) {
-  this.$ShowNotification({
+  notification({
     title: 'this is my title for ' + i,
     text: 'this is my message for' + i + ' notification',
     type: i
@@ -49,7 +54,7 @@ export default {
   },
   methods: {
     click (i) {
-      this.$ShowNotification({
+      notification({
         title: `this is my title for ${i}`,
         text: `this is my message for ${i} notification`,
         type: i

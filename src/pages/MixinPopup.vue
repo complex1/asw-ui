@@ -12,6 +12,10 @@
 
 <script>
 import data from './jsonData/popup'
+import popup from '../asw-ele/plugin/popup'
+import '../asw-ele/plugin/popup/popup.scss'
+import '../asw-ele/plugin/notification/notification.scss'
+import notification from '../asw-ele/plugin/notification'
 export default {
   data: () => {
     return {
@@ -20,15 +24,15 @@ export default {
   },
   methods: {
     OpenInputPopup () {
-      this.$aswInputPopup('Input your name')
+      popup.InputPopup('Input your name')
         .then(e => {
-          this.$ShowNotification({
+          notification({
             title: 'Hi! ' + e + ' welcome to world of UI',
             type: 'success'
           })
         })
         .catch(e => {
-          this.$ShowNotification({
+          notification({
             title: e,
             type: 'danger'
           })
@@ -38,15 +42,15 @@ export default {
       const msg = `
       you sure, you want to <span style="color: red;">cancel</span> your ticket to <b>goa</b> ?
       `
-      this.$aswApproverPopup(msg)
+      popup.ApproverPopup(msg)
         .then(() => {
-          this.$ShowNotification({
+          notification({
             title: 'Your Goa plan has been canceled',
             type: 'success'
           })
         })
         .catch(() => {
-          this.$ShowNotification({
+          notification({
             title: 'You decline to cancel your goa plan',
             type: 'danger'
           })
