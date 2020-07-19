@@ -1,20 +1,52 @@
-import Vue from 'vue'
-import upperFirst from 'lodash/upperFirst'
-import camelCase from 'lodash/camelCase'
 import badges from './directive/badges'
-
-const requiredComponent = require.context('./components', true, /\.vue$/)
-requiredComponent.keys().forEach(fileName => {
-  // get component config
-  const componentConfig = requiredComponent(fileName)
-
-  // get pascal case name of component's
-  let componentName = upperFirst(
-    camelCase(fileName.replace(/^\.\//, '').replace(/\.\w+$/, ''))
-  )
-  // register component
-  componentName = 'Asw' + componentName
-  componentName = componentName.replace(/SingleComponent/, '')
-  Vue.component(componentName, componentConfig.default || componentConfig)
-})
-Vue.directive('badges', badges)
+import Chips from './components/Chips'
+import Code from './components/Code'
+import DataTable from './components/DataTable'
+import Drag from './components/Drag&Drop/Drag'
+import Drop from './components/Drag&Drop/Drop'
+import DragResize from './components/DragResize'
+import FormModal from './components/FormModal'
+import IconsDef from './components/IconsDef'
+import InputBox from './components/InputBox'
+import InputRadio from './components/InputRadio'
+import InputSelect from './components/InputSelect'
+import InputTextarea from './components/InputTextarea'
+import JsonTree from './components/JsonTree'
+import LoaderBalls from './components/Loader/Balls'
+import LoaderBeat from './components/Loader/Beat'
+import LoaderBarcylon from './components/Loader/Barcylon'
+import LoaderBars from './components/Loader/Bars'
+import LoaderBubble from './components/Loader/Bubble'
+import LoaderSpin from './components/Loader/Spin'
+import LoaderSpinBubble from './components/Loader/SpinBubble'
+import Popover from './components/Popover'
+import ProgressBar from './components/ProgressBar'
+import TexEditor from './components/TexEditor'
+export default {
+  install (Vue) {
+    Vue.component('asw-chips', Chips)
+    Vue.component('asw-code', Code)
+    Vue.component('asw-data-table', DataTable)
+    Vue.component('asw-drag', Drag)
+    Vue.component('asw-drop', Drop)
+    Vue.component('asw-drag-resize', DragResize)
+    Vue.component('asw-form-modal', FormModal)
+    Vue.component('asw-icons-def', IconsDef)
+    Vue.component('asw-input-box', InputBox)
+    Vue.component('asw-input-radio', InputRadio)
+    Vue.component('asw-input-select', InputSelect)
+    Vue.component('asw-input-textarea', InputTextarea)
+    Vue.component('asw-json-tree', JsonTree)
+    Vue.component('asw-loader-balls', LoaderBalls)
+    Vue.component('asw-loader-barcylon', LoaderBarcylon)
+    Vue.component('asw-loader-bars', LoaderBars)
+    Vue.component('asw-loader-beat', LoaderBeat)
+    Vue.component('asw-loader-bubble', LoaderBubble)
+    Vue.component('asw-loader-spin', LoaderSpin)
+    Vue.component('asw-loader-spin-bubble', LoaderSpinBubble)
+    Vue.component('asw-popover', Popover)
+    Vue.component('asw-progress-bar', ProgressBar)
+    Vue.component('asw-text-editor', TexEditor)
+    Vue.directive('badges', badges)
+  }
+}

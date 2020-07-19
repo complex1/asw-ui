@@ -16,3 +16,17 @@ requiredComponent.keys().forEach(fileName => {
   window.elementList.push(componentName)
   Vue.component(componentName, componentConfig.default || componentConfig)
 })
+
+Vue.mixin({
+  data () {
+    return {
+      showDoc: false
+    }
+  },
+  mounted () {
+    this.showDoc = true
+  },
+  beforeDestroy () {
+    this.showDoc = false
+  }
+})

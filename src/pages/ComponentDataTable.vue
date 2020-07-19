@@ -2,7 +2,7 @@
 <div>
   <h2>Asw Data Table </h2>
   <hr>
-  <my-doc>
+  <my-doc v-if="showDoc">
     <asw-data-table/>
   </my-doc>
   <hr>
