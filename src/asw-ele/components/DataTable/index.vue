@@ -3,7 +3,7 @@
     <thead>
       <tr>
         <th v-for="i in GetHeaderValue" :key="i.id">
-          {{i}}
+          {{i.value}}
           <span class="float-right sort-icon" @click="sortData(i, -1)">&#x2193;</span>
           <span class="float-right sort-icon" @click="sortData(i, 1)">&#x2191;</span>
         </th>
@@ -11,7 +11,7 @@
     </thead>
     <tbody>
       <tr v-for="i in GetFilteredData" :key="i.id">
-        <td v-for="j in GetHeaderKey" :key="j.id" @click="clicked(i,j)" v-html="i[j]"></td>
+        <td v-for="j in GetHeaderValue" :key="j.id" @click="clicked(i,j)" v-html="i[j.key]"></td>
       </tr>
     </tbody>
   </table>
@@ -43,6 +43,10 @@ export default {
     sort: {
       type: Boolean,
       default: true
+    },
+    header: {
+      type: Array,
+      default: () => []
     }
   },
   methods: {
@@ -91,7 +95,7 @@ export default {
       }
     },
     sortData (value, dir) {
-      const key = this.GetHeaderKey[this.GetHeaderValue.indexOf(value)]
+      const key = value.key
       this.data.sort(function (a, b) {
         if (a[key] < b[key]) { return -1 * dir }
         if (a[key] > b[key]) { return 1 * dir }
@@ -108,21 +112,25 @@ export default {
     },
     GetSearchKeys () {
       if (this.searchKeys.length === 0) {
-        return this.GetHeaderKey
+        return this.GetHeaderValue.map(e => e.key)
       } else {
         return this.searchKeys
       }
     },
     GetHeaderValue () {
-      try {
-        return Object.keys(this.data[0])
-      } catch {
-        return []
+      if (this.header.length > 0) {
+        return this.header
       }
-    },
-    GetHeaderKey () {
       try {
-        return Object.keys(this.data[0])
+        const keyArr = Object.keys(this.data[0])
+        const header = []
+        for (const i in keyArr) {
+          header.push({
+            key: keyArr[i],
+            value: keyArr[i]
+          })
+        }
+        return header
       } catch {
         return []
       }

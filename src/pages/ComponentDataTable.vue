@@ -12,7 +12,15 @@
     <asw-input-box type="number" class="mx-2" label="Page Number" v-model="pageNumber"/>
     <asw-input-select label="Per Page" class="mx-2" v-model="perPage" :options="[5,10,20,50, 'full']"/>
   </div>
-  <asw-data-table class="dark" :data="data" :search="search" :perPage="perPage" :currentPage="pageNumber" @click="clicked" @filter="filter"/>
+  <asw-data-table
+    class="dark" :data="data"
+    :search="search"
+    :perPage="perPage"
+    :currentPage="pageNumber"
+    @click="clicked"
+    @filter="filter"
+    :header='header'
+    />
   {{len}}
   <my-code :code="docData.code" />
 </div>
@@ -29,7 +37,17 @@ export default {
       search: '',
       pageNumber: 1,
       perPage: 5,
-      len: mockData.length
+      len: mockData.length,
+      header: [
+        {
+          key: 'id',
+          value: 'ID'
+        },
+        {
+          key: 'first_name',
+          value: 'First Name'
+        }
+      ]
     }
   },
   methods: {
