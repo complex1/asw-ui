@@ -1,5 +1,7 @@
 <template>
-  <i v-on="listeners" :style="getStyle" :class="getIcon" v-bind="$attrs"/>
+  <div v-on="listeners" v-bind="$attrs">
+    <i :style="getStyle" :class="getIcon"></i>
+  </div>
 </template>
 
 <script>

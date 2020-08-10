@@ -1,6 +1,6 @@
 {
   "name": "asw-ele2",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "'for faad UI element'",
   "main": "index.js",
   "scripts": {
