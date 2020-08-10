@@ -197,9 +197,9 @@ export default {
 
 <style src="quill/dist/quill.snow.css"></style>
 <style lang="scss" >
-.ql-editor {
-  min-height: 200px;
+.quillWrapper .ql-editor {
   font-size: 16px;
+  min-height: 200px;
 }
 .ql-snow .ql-stroke.ql-thin,
 .ql-snow .ql-thin {

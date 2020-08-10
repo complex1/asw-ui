@@ -7,6 +7,7 @@ import code from '@/components/code.vue'
 import docTem from '@/components/docTemp.vue'
 import docCode from '@/components/docCode.vue'
 import { codemirror } from 'vue-codemirror'
+import '@fortawesome/fontawesome-free/css/all.css'
 Vue.use(aswEle)
 Vue.component('my-code', code)
 Vue.component('my-doc', docTem)

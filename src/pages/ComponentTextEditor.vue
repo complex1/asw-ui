@@ -6,6 +6,9 @@
     </my-doc>
     <hr>
     <asw-text-editor v-model="data" />
+    <div class="p-3 ql-snow">
+      <div class="ql-editor" v-html="data"></div>
+    </div>
     <div class="p-3" >{{data}}</div>
   </div>
 </template>
@@ -19,7 +22,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

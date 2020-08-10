@@ -1,20 +1,8 @@
 <template>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    :viewBox="getIcon.viewBox"
-    :style="{height: size + 'px', width: size + 'px'}"
-    :fill="color"
-    v-on="listeners"
-    v-bind="$attrs"
-  >
-  <path />
-  </svg>
+  <i v-on="listeners" :style="getStyle" :class="getIcon" v-bind="$attrs"/>
 </template>
 
 <script>
-import icons from './icon-list.js'
 export default {
   name: 'asw-icons-def',
   inheritAttrs: false,
@@ -34,13 +22,12 @@ export default {
   },
   computed: {
     getIcon () {
-      if (this.icon in icons) {
-        return icons[this.icon]
-      } else {
-        return {
-          viewBox: '0 0 0 0',
-          d: ''
-        }
+      return `fa fa-${this.icon}`
+    },
+    getStyle () {
+      return {
+        fontSize: this.size,
+        color: this.color
       }
     },
     listeners () {
@@ -48,25 +35,6 @@ export default {
         ...this.$listeners
       }
     }
-  },
-  methods: {
-    iconRender () {
-      const ele = this.$el.childNodes[0]
-      console.log(JSON.stringify(icons))
-      for (const attr in this.getIcon) {
-        if (attr !== 'viewBox') {
-          ele.setAttribute(attr, this.getIcon[attr])
-        }
-      }
-    }
-  },
-  watch: {
-    icon () {
-      this.iconRender()
-    }
-  },
-  mounted () {
-    this.iconRender()
   }
 }
 </script>

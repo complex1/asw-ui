@@ -1,5 +1,5 @@
 <template>
-  <div :id='id' class="my-drag-resize-ele" draggable="false" :class="active ? 'activeClass' : ''" @mousedown="Activate" :style="getStyle">
+  <div :id='id' class="my-drag-resize-ele" draggable="false" @click="$emit('click')" :class="active ? 'activeClass' : ''" @mousedown="Activate" :style="getStyle">
     <div class="resizerContainer" ref="resizer" v-show="active" >
       <div class='resizer top-left' :style="resizerTopLeft"></div>
       <div class='resizer top-right' :style="resizerTopRight" ></div>
@@ -219,9 +219,19 @@ export default {
         }
       }
     },
-    parentClick (e) {
+    clickOutside (e) {
       e.preventDefault()
-      this.active = false
+
+      var a = e.target
+      var els = []
+      var self = this
+      while (a) {
+        els.unshift(a)
+        a = a.parentNode
+      }
+      if (els.findIndex((i) => { return i === self.$el }) === -1) {
+        self.dActivate()
+      }
     },
     dActivate () {
       this.active = false
@@ -234,16 +244,14 @@ export default {
     }
   },
   mounted () {
-    const parent = this.$el.parentNode
-    parent.addEventListener('mousedown', this.parentClick)
+    window.addEventListener('mousedown', this.clickOutside)
   },
   beforeDestroy () {
     this.stopResize()
     this.stopMove()
     this.dActivate()
     try {
-      const parent = this.$el.parentNode
-      parent.removeEventListener('mousedown', this.parentClick)
+      window.removeEventListener('mousedown', this.clickOutside)
     } catch {}
   }
 }

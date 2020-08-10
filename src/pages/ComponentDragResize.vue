@@ -5,7 +5,7 @@
       <asw-drag-resize />
     </my-doc>
     <div class="parent">
-      <asw-drag-resize :showDimension="true" :box="data">
+      <asw-drag-resize :showDimension="true" :box="data" @click="clicked">
         <div class="child">{{data}}</div>
       </asw-drag-resize>
       <asw-drag-resize :showDimension="true" :box="data1">
@@ -41,6 +41,11 @@ export default {
         drag: true,
         resize: true
       }
+    }
+  },
+  methods: {
+    clicked () {
+      console.log('clicked')
     }
   }
 }

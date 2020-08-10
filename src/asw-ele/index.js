@@ -22,6 +22,7 @@ import LoaderSpinBubble from './components/Loader/SpinBubble'
 import Popover from './components/Popover'
 import ProgressBar from './components/ProgressBar'
 import TexEditor from './components/TexEditor'
+import ShowText from './components/TexEditor/showText'
 export default {
   install (Vue) {
     Vue.component('asw-chips', Chips)
@@ -31,7 +32,7 @@ export default {
     Vue.component('asw-drop', Drop)
     Vue.component('asw-drag-resize', DragResize)
     Vue.component('asw-form-modal', FormModal)
-    Vue.component('asw-icons-def', IconsDef)
+    Vue.component('asw-icon-def', IconsDef)
     Vue.component('asw-input-box', InputBox)
     Vue.component('asw-input-radio', InputRadio)
     Vue.component('asw-input-select', InputSelect)
@@ -47,6 +48,7 @@ export default {
     Vue.component('asw-popover', Popover)
     Vue.component('asw-progress-bar', ProgressBar)
     Vue.component('asw-text-editor', TexEditor)
+    Vue.component('asw-show-text', ShowText)
     Vue.directive('badges', badges)
   }
 }

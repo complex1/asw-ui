@@ -9,6 +9,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "asw-icon": "^1.0.2",
     "codemirror": "^5.54.0",
     "core-js": "^3.6.5",

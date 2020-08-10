@@ -2,9 +2,9 @@
   <div>
     <h2>Asw Icon's</h2>
     <hr>
-    <my-doc>
+    <!-- <my-doc>
       <asw-icon-def/>
-    </my-doc>
+    </my-doc> -->
     <hr>
     <div class="flex justify-space-between">
       <h3>Icon List</h3>
@@ -21,8 +21,11 @@
 </template>
 
 <script>
-import allIcon from '../asw-ele/components/IconsDef/icon-list'
-const iconlist = Object.keys(allIcon)
+import allIcon from '../asw-ele/components/IconsDef/asw-icons/fa-icon-class'
+let iconlist = []
+for (const i in allIcon) {
+  iconlist = iconlist.concat(allIcon[i])
+}
 export default {
   data: function () {
     return {
