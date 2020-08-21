@@ -2,9 +2,9 @@
   <div>
     <h2>Asw Icon's</h2>
     <hr>
-    <!-- <my-doc>
+    <my-doc>
       <asw-icon-def/>
-    </my-doc> -->
+    </my-doc>
     <hr>
     <div class="flex justify-space-between">
       <h3>Icon List</h3>

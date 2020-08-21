@@ -33,7 +33,7 @@ const OpenNotification = function (config) {
 
   const cross = document.createElement('div')
   cross.setAttribute('class', 'aswNotification-close')
-  cross.innerHTML = '&#10060;'
+  cross.innerHTML = '&#10005;'
   notificationFlag.append(cross)
 
   notificationDiv.append(notificationFlag)

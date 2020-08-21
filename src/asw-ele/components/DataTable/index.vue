@@ -2,10 +2,10 @@
   <table class="asw-data-table full-width fl border-h border-v">
     <thead>
       <tr>
-        <th v-for="i in GetHeaderValue" :key="i.id">
+        <th v-for="i in GetHeaderValue" :key="i.id" :style="{width: i.width}">
           {{i.value}}
-          <span class="float-right sort-icon" @click="sortData(i, -1)">&#x2193;</span>
-          <span class="float-right sort-icon" @click="sortData(i, 1)">&#x2191;</span>
+          <span v-if="sort" class="float-right sort-icon" @click="sortData(i, -1)">&#x2193;</span>
+          <span v-if="sort" class="float-right sort-icon" @click="sortData(i, 1)">&#x2191;</span>
         </th>
       </tr>
     </thead>

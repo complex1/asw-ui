@@ -3,7 +3,10 @@ export default {
   inheritAttrs: false,
   mixins: [commonMixins],
   props: {
-    value: [String, Number, Array, Object, Boolean],
+    value: {
+      type: [String, Number, Array, Object, Boolean],
+      default: ''
+    },
     size: {
       type: String,
       default: 'm'

@@ -41,11 +41,17 @@ export default {
       header: [
         {
           key: 'id',
-          value: 'ID'
+          value: 'ID',
+          width: '20%'
         },
         {
           key: 'first_name',
           value: 'First Name'
+        },
+        {
+          key: 'email',
+          value: 'Email',
+          width: '20%'
         }
       ]
     }

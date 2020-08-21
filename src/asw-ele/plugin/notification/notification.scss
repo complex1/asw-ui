@@ -5,43 +5,42 @@
   top: 10px;
   z-index: 99999;
   .aswNotification {
+    color: #ffffff;
     &-primary {
-      color: #004085;
-      background-color: #cce5ff;
+     
+      background-color: #3a86ff;
       border-color: #b8daff;
     }
     &-secondary {
-      color: #383d41;
-      background-color: #e2e3e5;
+     
+      background-color: #929292;
       border-color: #d6d8db;
     }
     &-success {
-      color: #155724;
-      background-color: #d4edda;
+     
+      background-color: #0ab78a;
       border-color: #c3e6cb;
     }
     &-danger {
-      color: #721c24;
-      background-color: #f8d7da;
+     
+      background-color: #ef476f;
       border-color: #f5c6cb;
     }
     &-warning {
-      color: #856404;
-      background-color: #fff3cd;
+     
+      background-color: #f7ca61;
       border-color: #ffeeba;
     }
     &-info {
-      color: #0c5460;
-      background-color: #d1ecf1;
+     
+      background-color: #118ab2;
       border-color: #bee5eb;
     }
     &-light {
-      color: #818182;
       background-color: #fefefe;
       border-color: #fdfdfe;
     }
     &-dark {
-      color: #1b1e21;
       background-color: #d6d8d9;
       border-color: #c6c8ca;
     }
@@ -63,11 +62,12 @@
       animation: closeNotification 1s;
     }
     &-close {
+      color: #ffffff;
       width: fit-content;
       position: absolute;
-      top: 5px;
+      top: 2px;
       right: 5px;
-      font-size: 0.75rem;
+      font-size: 1.25rem;
       cursor: pointer;
     }
     &-title {
@@ -78,7 +78,7 @@
       text-overflow: ellipsis;
     }
     &-text {
-      opacity: 0.75;
+      font-weight: bold;
       margin-top: 5px;
       font-size: 0.8rem;
       white-space: nowrap;

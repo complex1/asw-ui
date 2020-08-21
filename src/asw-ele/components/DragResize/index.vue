@@ -220,8 +220,6 @@ export default {
       }
     },
     clickOutside (e) {
-      e.preventDefault()
-
       var a = e.target
       var els = []
       var self = this
