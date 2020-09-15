@@ -11,6 +11,7 @@
     <asw-input-box v-model="search" class="mx-2" label="SEARCH" @change="pageNumber = 1"/>
     <asw-input-box type="number" class="mx-2" label="Page Number" v-model="pageNumber"/>
     <asw-input-select label="Per Page" class="mx-2" v-model="perPage" :options="[5,10,20,50, 'full']"/>
+    <asw-pagination v-model="pageNumber" :pageCount="totalPage" />
   </div>
   <asw-data-table
     class="dark" :data="data"
@@ -54,6 +55,11 @@ export default {
           width: '20%'
         }
       ]
+    }
+  },
+  computed: {
+    totalPage () {
+      return parseInt(this.len / this.perPage) + ((this.len % this.perPage > 0))
     }
   },
   methods: {

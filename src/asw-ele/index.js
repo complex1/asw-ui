@@ -19,6 +19,7 @@ import LoaderBars from './components/Loader/Bars'
 import LoaderBubble from './components/Loader/Bubble'
 import LoaderSpin from './components/Loader/Spin'
 import LoaderSpinBubble from './components/Loader/SpinBubble'
+import Pagination from './components/Pagination'
 import Popover from './components/Popover'
 import ProgressBar from './components/ProgressBar'
 import TexEditor from './components/TexEditor'
@@ -45,6 +46,7 @@ export default {
     Vue.component('asw-load-bubble', LoaderBubble)
     Vue.component('asw-load-spin', LoaderSpin)
     Vue.component('asw-load-spin-bubble', LoaderSpinBubble)
+    Vue.component('asw-pagination', Pagination)
     Vue.component('asw-popover', Popover)
     Vue.component('asw-progress-bar', ProgressBar)
     Vue.component('asw-text-editor', TexEditor)

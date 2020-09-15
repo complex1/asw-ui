@@ -110,6 +110,9 @@ export default {
     },
     code () {
       this.$emit('input', this.code)
+    },
+    value () {
+      this.code = this.value
     }
   },
   mounted () {
