@@ -16,7 +16,7 @@ export default {
   data: () => {
     return {
       data: {
-        employee: { name: 'John', age: 30, city: 'New York' }
+        employee: { name: 'John', age: 30, city: 'New York', withNull: null }
       }
     }
   }

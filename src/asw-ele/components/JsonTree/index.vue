@@ -3,9 +3,11 @@
     <span v-if="getType === 'string'" class="json-value-string">"{{data}}"</span>
     <span v-if="getType === 'number'" class="json-value-number">{{data}}</span>
     <span v-if="getType === 'boolean'" class="json-value-boolean">{{data}}</span>
+    <span v-if="getType === 'undefined'" class="json-value-undefined">undefined</span>
+    <span v-if="getType === 'null'" class="json-value-null">null</span>
     <span v-if="getType === 'object'">
       <span @click="toggle" class="json-value-brac">{</span>
-      <div v-show="show" class="object-ele" v-for="(i,key) in data" :key="i.id">
+      <div v-show="show" class="object-ele" v-for="(i,key) in data" :key="key">
         <span class="json-value-key mr-2" :style="shiftEle">"{{key}}"&nbsp;:&nbsp;&nbsp;</span>
         <jsonTree :data="i" :shift="shift*1 + 1" :depth="depth - 1"/>
       </div>
@@ -14,7 +16,7 @@
     </span>
     <span v-if="getType === 'array'">
       <span class="json-value-brac" @click="toggle" >[</span>
-      <div v-show="show" class="arr-ele" v-for="i in data" :key="i.id">
+      <div v-show="show" class="arr-ele" v-for="(i,index) in data" :key="index">
         <jsonTree :style="shiftEle" :data="i" :shift="shift*1 + 1" :depth="depth - 1"/>
       </div>
       <span v-show="!show" @click="toggle">&nbsp;&nbsp;...&nbsp;&nbsp;</span>
@@ -71,6 +73,9 @@ export default {
       }
     },
     getType () {
+      if (this.data === null) {
+        return 'null'
+      }
       if (typeof this.data !== 'object') {
         return typeof this.data
       } else {
@@ -103,6 +108,12 @@ export default {
 }
 .json-value-boolean {
   color: #ff8e0b;
+}
+.json-value-undefined {
+  color: #aaaaaa;
+}
+.json-value-null {
+  color: rgb(70, 70, 247);
 }
 .json-value-key {
   color: #1a1a1a;

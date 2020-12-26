@@ -47,18 +47,20 @@
     &-flag {
       margin: 5px;
       padding: 10px 20px;
-      width: 100%;
       float: right;
       border-radius: 0.5rem;
       position: relative;
+      opacity: 1;
       animation: openNotification 1s;
+      width: 100%;
     }
     &-flag-out {
       margin: 5px;
-      padding: 10px 0px;
-      width: 0%;
+      padding: 10px 20px;
       float: right;
       border-radius: 0.5rem;
+      width: 100%;
+      opacity: 0;
       animation: closeNotification 1s;
     }
     &-close {
@@ -73,39 +75,29 @@
     &-title {
       font-weight: bolder;
       font-size: 1rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
     &-text {
       font-weight: bold;
       margin-top: 5px;
       font-size: 0.8rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
   }
 }
 
 @keyframes openNotification {
   from {
-    width: 0%;
-    padding: 10px 0px;
+    opacity: 0;
   }
   to {
-    width: 100%;
-    padding: 10px 20px;
+    opacity: 1;
   }
 }
 
 @keyframes closeNotification {
   to {
-    width: 0%;
-    padding: 10px 0px;
+    opacity: 0;
   }
   from {
-    width: 100%;
-    padding: 10px 20px;
+    opacity: 1;
   }
 }
