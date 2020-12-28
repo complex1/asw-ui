@@ -2,7 +2,7 @@
   <table class="asw-data-table full-width fl border-h border-v">
     <thead>
       <tr>
-        <th v-for="i in GetHeaderValue" :key="i.id" :style="{width: i.width}">
+        <th v-for="i in GetHeaderValue" :key="i.id" :style="{width: i.width, ...i.style}">
           {{i.value}}
           <span v-if="sort" class="float-right sort-icon" @click="sortData(i, -1)">&#x2193;</span>
           <span v-if="sort" class="float-right sort-icon" @click="sortData(i, 1)">&#x2191;</span>
@@ -11,7 +11,7 @@
     </thead>
     <tbody>
       <tr v-for="i in GetFilteredData" :key="i.id">
-        <td v-for="j in GetHeaderValue" :key="j.id" @click="clicked(i,j)" v-html="i[j.key]"></td>
+        <td v-for="j in GetHeaderValue" :key="j.id" @click="clicked(i,j)" v-html="i[j.key]" :style="j.style"></td>
       </tr>
     </tbody>
   </table>

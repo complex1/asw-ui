@@ -52,7 +52,10 @@ export default {
         {
           key: 'email',
           value: 'Email',
-          width: '20%'
+          width: '20%',
+          style: {
+            background: 'red'
+          }
         }
       ]
     }
