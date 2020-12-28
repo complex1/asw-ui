@@ -13,11 +13,13 @@ import CodeMirror from 'vue-codemirror'
 import { JSHINT } from 'jshint'
 import 'codemirror/mode/javascript/javascript'
 import 'codemirror/mode/xml/xml.js'
+import 'codemirror/mode/css/css'
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/idea.css'
 import 'codemirror/theme/material.css'
 import 'codemirror/addon/lint/lint'
 import 'codemirror/addon/lint/javascript-lint'
+import 'codemirror/addon/lint/css-lint'
 import 'codemirror/addon/lint/lint.css'
 window.JSHINT = JSHINT
 export default {
