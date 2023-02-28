@@ -4,37 +4,3 @@ ASW ELE is a component library, which is a collection of pre-built, reusable UI 
 Each component in the library is designed to be modular, meaning that it can be easily customized and extended to fit the specific needs of a particular project. This allows developers to save time and effort by not having to create each component from scratch, and instead simply use pre-built components that have already been tested and optimized.
 
 # Demo Link [a link](https://complex1-asw-ele.netlify.app/)
-
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
